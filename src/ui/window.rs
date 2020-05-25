@@ -4,10 +4,12 @@ extern crate gio;
 use gtk::prelude::*;
 use gio::prelude::*;
 
+mod body;
 mod styles;
 
 fn build_ui(application: &gtk::Application) {
   let window = gtk::ApplicationWindow::new(application);
+  gtk::WidgetExt::set_widget_name(&window, "window");
 
   window.set_title("Metrognome");
   window.set_border_width(10);
@@ -15,11 +17,9 @@ fn build_ui(application: &gtk::Application) {
   window.set_default_size(800, 400);
 
   let vbox = gtk::Box::new(gtk::Orientation::Vertical, 5);
-  
-  let button = gtk::Button::new_with_label("Tap tempo");
-  gtk::WidgetExt::set_widget_name(&button, "button1");
+  gtk::WidgetExt::set_widget_name(&vbox, "body");
 
-  vbox.add(&button);
+  body::build(&vbox);
   window.add(&vbox);
   window.show_all();
 }

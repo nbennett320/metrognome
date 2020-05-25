@@ -6,6 +6,14 @@ extern crate gio;
 use gtk::prelude::*;
 
 const STYLE: &str = "
+  #window {
+    background-color: #112233;
+  }
+
+  #body {
+    background-color: inherit;
+  }
+
   #button1 {
     background-color: #ffffff;
     color: #000000;
