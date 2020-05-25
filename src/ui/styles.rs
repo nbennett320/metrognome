@@ -18,6 +18,10 @@ const STYLE: &str = "
     background-color: #ffffff;
     color: #000000;
   }
+
+  #time-signature-divider {
+    color: #ffffff;
+  }
 ";
 
 pub fn apply_styles() {
