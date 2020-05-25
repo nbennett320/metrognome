@@ -8,6 +8,7 @@ edition = "2018"
 
 [dependencies]
 glib = "0.9.3"
+gdk = "0.12.1"
 
 [dependencies.gtk]
 version = "0.8.1"
