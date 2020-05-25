@@ -1,0 +1,18 @@
+[package]
+name = "metrognome"
+version = "0.1.0"
+authors = ["Noah Bennett <nbennett.320@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+glib = "0.9.3"
+
+[dependencies.gtk]
+version = "0.8.1"
+features = ["v3_16"]
+
+[dependencies.gio]
+version = ""
+features = ["v2_44"]
