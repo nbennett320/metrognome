@@ -25,15 +25,15 @@ fn build_ui(application: &gtk::Application) {
 }
 
 pub fn init() {
-    let application = gtk::Application::new(
-      Some("com.gnome.metrognome"), 
-      Default::default()
-    ).expect("Failed to initialize GTK application");
+  let application = gtk::Application::new(
+    Some("com.gnome.metrognome"), 
+    Default::default()
+  ).expect("Failed to initialize GTK application");
 
-    application.connect_activate(|app| {
-      styles::apply_styles();
-      build_ui(app);
-    });
+  application.connect_activate(|app| {
+    styles::apply_styles();
+    build_ui(app);
+  });
 
-    application.run(&[]);
+  application.run(&[]);
 }

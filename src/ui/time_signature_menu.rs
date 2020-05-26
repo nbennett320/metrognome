@@ -23,5 +23,4 @@ pub fn build(container: &gtk::Box) {
   wrapper.add(&divider);
   selection_box(&wrapper, &LOWER_INTERVAL);
   container.add(&wrapper);
-
 }
